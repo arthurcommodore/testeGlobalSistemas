@@ -2,7 +2,7 @@ program testeGlobalSistemas;
 
 uses
   Vcl.Forms,
-  Login in 'src\Login.pas' {form_login},
+  LoginUnit in 'src\LoginUnit.pas' {form_login},
   PeopleUnit in 'src/PeopleUnit.pas' {PeopleForm};
 
 {$R *.res}

@@ -100,7 +100,7 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
-        <DCCReference Include="src\Login.pas">
+        <DCCReference Include="src\LoginUnit.pas">
             <Form>form_login</Form>
         </DCCReference>
         <DCCReference Include="src\PeopleUnit.pas">
