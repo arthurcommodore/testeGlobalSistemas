@@ -17,7 +17,7 @@ object PeopleForm: TPeopleForm
     Top = 399
     Width = 75
     Height = 25
-    Caption = 'Button1'
+    Caption = 'Get Resquest'
     TabOrder = 0
     OnClick = Button1Click
   end

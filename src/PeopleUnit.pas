@@ -28,17 +28,19 @@ type
 
 var
   PeopleForm: TPeopleForm;
-  JSonValue: TJSonValue;
-  nameRequest: string;
-  HeightRequest: string;
-  MassRequest: string;
 
-  I : integer;
 implementation
 
 {$R *.dfm}
 
 procedure TPeopleForm.Button1Click(Sender: TObject);
+var
+  JSonValue: TJSonValue;
+  nameRequest: string;
+  HeightRequest: string;
+  MassRequest: string;
+  I : integer;
+
 begin
 
   StringGrid1.ColCount := 3;
@@ -67,6 +69,8 @@ begin
     StringGrid1.Cells[1, I] := HeightRequest;
     StringGrid1.Cells[2, I] := MassRequest;
   end;
+
+  RESTRequest1.Free;
 
 end;
 

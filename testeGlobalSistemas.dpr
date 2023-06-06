@@ -2,7 +2,7 @@ program testeGlobalSistemas;
 
 uses
   Vcl.Forms,
-  LoginUnit in 'src\LoginUnit.pas' {form_login},
+  LoginUnit in 'src/LoginUnit.pas' {LoginForm},
   PeopleUnit in 'src/PeopleUnit.pas' {PeopleForm};
 
 {$R *.res}
@@ -10,7 +10,7 @@ uses
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-  Application.CreateForm(Tform_login, form_login);
+  Application.CreateForm(TLoginForm, LoginForm);
   Application.CreateForm(TPeopleForm, PeopleForm);
   Application.Run;
 end.

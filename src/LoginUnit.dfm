@@ -1,8 +1,8 @@
-object form_login: Tform_login
+object LoginForm: TLoginForm
   Left = 0
   Top = 148
   BorderIcons = []
-  ClientHeight = 750
+  ClientHeight = 749
   ClientWidth = 1270
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -61,7 +61,7 @@ object form_login: Tform_login
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
-      OnClick = btn_fecharClick
+      OnClick = BtnfecharClick
     end
     object pnl_image: TPanel
       Left = 0
@@ -636,7 +636,7 @@ object form_login: Tform_login
         Font.Style = []
         ParentFont = False
       end
-      object edt_username: TEdit
+      object edtUsername: TEdit
         Left = 0
         Top = 23
         Width = 361
@@ -647,6 +647,7 @@ object form_login: Tform_login
         Font.Height = -19
         Font.Name = 'Segoe UI'
         Font.Style = []
+        ImeName = 'Portuguese (Brazilian ABNT)'
         ParentFont = False
         CanUndoSelText = True
         TabOrder = 0
@@ -679,7 +680,7 @@ object form_login: Tform_login
         Font.Style = []
         ParentFont = False
       end
-      object edt_password: TEdit
+      object edtPassword: TEdit
         Left = 0
         Top = 23
         Width = 361
@@ -690,6 +691,7 @@ object form_login: Tform_login
         Font.Height = -19
         Font.Name = 'Segoe UI'
         Font.Style = []
+        ImeName = 'Portuguese (Brazilian ABNT)'
         ParentFont = False
         CanUndoSelText = True
         TabOrder = 0

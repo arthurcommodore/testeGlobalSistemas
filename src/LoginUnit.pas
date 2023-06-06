@@ -3,12 +3,13 @@ unit LoginUnit;
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Buttons, Vcl.ExtCtrls, Vcl.StdCtrls,
   Vcl.Imaging.pngimage, PeopleUnit;
 
 type
-  Tform_login = class(TForm)
+  TLoginForm = class(TForm)
     pnl_principal: TPanel;
     btn_fechar: TSpeedButton;
     Shape1: TShape;
@@ -18,12 +19,12 @@ type
     Label2: TLabel;
     pnl_username: TPanel;
     Label3: TLabel;
-    edt_username: TEdit;
+    edtUsername: TEdit;
     pnl_password: TPanel;
     Label4: TLabel;
-    edt_password: TEdit;
+    edtPassword: TEdit;
     Button1: TButton;
-    procedure btn_fecharClick(Sender: TObject);
+    procedure BtnfecharClick(Sender: TObject);
     procedure FormResize(Sender: TObject);
     procedure Button1Click(Sender: TObject);
   private
@@ -33,29 +34,29 @@ type
   end;
 
 var
-  form_login: Tform_login;
+  LoginForm: TLoginForm;
 
 implementation
 
 {$R *.dfm}
 
-procedure Tform_login.Button1Click(Sender: TObject);
+procedure TLoginForm.Button1Click(Sender: TObject);
 begin
-  if((edt_username.Text = 'teste') and (edt_password.Text = '102030')) then
+  if ((edtUsername.Text = 'teste') and (edtPassword.Text = '102030')) then
   begin
-    form_login.Hide;
+    LoginForm.Hide;
     PeopleForm.Show;
   end;
 end;
 
-procedure Tform_login.FormResize(Sender: TObject);
+procedure TLoginForm.FormResize(Sender: TObject);
 begin
-  edt_password.PasswordChar := '*';
-  pnl_principal.Top :=  Round (form_login.Height / 2 - pnl_principal.Height / 2);
-  pnl_principal.left :=  Round (form_login.Width / 2 - pnl_principal.Width / 2);
+  edtPassword.PasswordChar := '*';
+  pnl_principal.Top := Round(LoginForm.Height / 2 - pnl_principal.Height / 2);
+  pnl_principal.left := Round(LoginForm.Width / 2 - pnl_principal.Width / 2);
 end;
 
-procedure Tform_login.btn_fecharClick(Sender: TObject);
+procedure TLoginForm.BtnfecharClick(Sender: TObject);
 begin
   Application.Terminate;
 end;
